@@ -1,0 +1,79 @@
+/* Voyage · Ausgabe 04 | Feinschliff ohne Änderung am redaktionellen Design */
+
+/* Ein ruhiger, grosszügiger Magazine-Masthead mit einem echten ausklappbaren Menü. */
+.site-header { position: relative; z-index: 30; border-bottom: 1px solid var(--line); }
+.masthead { position: relative; min-height: 214px; display: flex; align-items: center; justify-content: center; }
+.masthead .brand { flex-shrink: 0; }
+.menu-toggle.header-menu-toggle {
+  display: inline-flex; align-items: center; gap: 12px;
+  position: absolute; right: var(--gutter); top: 50%; transform: translateY(-50%);
+  padding: 11px 13px; background: transparent; color: #3c454b;
+  border: 1px solid transparent; cursor: pointer;
+  font: 600 11px/1 var(--sans); letter-spacing: .12em; text-transform: uppercase;
+  transition: border-color .18s ease, color .18s ease, background-color .18s ease;
+}
+.header-menu-toggle:hover, .header-menu-toggle[aria-expanded="true"] { color: var(--red); border-color: #dde1e4; background: #fafbfc; }
+.header-menu-toggle:focus-visible { outline: 2px solid var(--red); outline-offset: 3px; }
+.header-menu-toggle .hamburger { display: flex; flex-direction: column; gap: 5px; }
+.header-menu-toggle .hamburger i { display: block; height: 1.5px; width: 21px; background: currentColor; transition: transform .15s ease; }
+.header-menu-toggle[aria-expanded="true"] .hamburger i:first-child { transform: translateY(3.25px) rotate(45deg); }
+.header-menu-toggle[aria-expanded="true"] .hamburger i:last-child { transform: translateY(-3.25px) rotate(-45deg); }
+.main-nav { min-height: 0; height: 0; padding-top: 0; padding-bottom: 0; border: 0; position: relative; }
+.main-nav .nav-links { display: none; position: absolute; z-index: 50; top: 0; right: var(--gutter); left: auto;
+  width: min(320px, calc(100% - var(--gutter) * 2));
+  padding: 8px 22px 16px; margin: 0; background: #fff;
+  border: 1px solid var(--line); border-top: 2px solid var(--red);
+  box-shadow: 0 18px 38px rgba(25,32,39,.10); flex-direction: column; align-items: stretch; gap: 0;
+}
+.main-nav .nav-links.open { display: flex; }
+.main-nav .nav-links a { display: block; padding: 17px 0; border-bottom: 1px solid var(--line); font-size: 12px; }
+.main-nav .nav-links li:last-child a { border-bottom: none; }
+
+/* 3:2 für das neue, vollständige A350-Motiv – auch in der mobilen Vorschau. */
+.behind-grid { min-height: 0; align-items: start; grid-template-columns: 56% 44%; }
+.behind-visual.a350-feature {
+  display: block; min-height: 0; width: 100%; height: auto; aspect-ratio: 3 / 2;
+  align-self: start; overflow: hidden;
+}
+.behind-visual.a350-feature img { width: 100%; height: 100%; object-fit: cover; object-position: center center; }
+
+/* Die Textspalte schliesst bündig mit dem 3:2-Bild ab, ohne den Magazin-Look zu verlieren. */
+.behind-content { min-height: 0; padding: 25px clamp(27px, 3vw, 42px) 24px; }
+.behind-content h3 { margin-top: 12px; margin-bottom: 12px; }
+.behind-content > p { margin-bottom: 12px; line-height: 1.67; }
+.behind-subnav { padding-top: 12px; }
+
+/* Zurückhaltender, magazintypischer Footer: Mitte Wortmarke, rechts Social. */
+.footer-grid.footer-grid-minimal { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center;
+  gap: 18px; padding-top: 49px; padding-bottom: 42px; }
+.footer-grid-minimal .footer-brand { grid-column: 2; }
+.footer-socials { grid-column: 3; justify-self: end; display: inline-flex; align-items: center; gap: 9px; }
+.footer-socials .social-icon { width: 38px; height: 38px; display: inline-flex; align-items: center; justify-content: center;
+  color: #364148; border: 1px solid #dce1e4; background: #fff;
+  transition: color .18s ease, border-color .18s ease, background .18s ease; }
+.footer-socials .social-icon:hover { color: var(--red); border-color: #bdc4c8; background: #fbfcfc; }
+.footer-socials .social-icon svg { width: 19px; height: 19px; }
+.footer-bottom.footer-bottom-minimal { border-top: 1px solid var(--line); }
+
+@media (max-width: 1170px) {
+  .masthead { min-height: 195px; }
+  .behind-grid { grid-template-columns: 56% 44%; }
+}
+@media (max-width: 820px) {
+  .masthead { min-height: 185px; }
+  .main-nav { min-height: 0; height: 0; }
+  .main-nav .nav-links { right: var(--gutter); left: auto; width: min(320px,calc(100% - var(--gutter) * 2)); }
+  .behind-grid { grid-template-columns: 1fr; }
+  .behind-visual.a350-feature { min-height: 0; aspect-ratio: 3 / 2; }
+}
+@media (max-width: 580px) {
+  .masthead { min-height: 177px; }
+  .menu-toggle.header-menu-toggle { top: 27px; right: var(--gutter); transform: none; padding: 8px; font-size: 0; gap: 0; }
+  .menu-toggle.header-menu-toggle .hamburger i { width: 22px; }
+  .behind-visual.a350-feature { min-height: 0; aspect-ratio: 3 / 2; }
+  .footer-grid.footer-grid-minimal { display: flex; flex-direction: column; justify-content: center; align-items: center;
+    gap: 26px; padding-top: 39px; padding-bottom: 30px; }
+  .footer-grid-minimal .footer-brand { margin: 0; }
+  .footer-socials { align-self: center; justify-self: center; }
+  .footer-bottom.footer-bottom-minimal { padding-top: 18px; padding-bottom: 22px; }
+}
