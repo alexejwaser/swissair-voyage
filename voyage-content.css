@@ -144,3 +144,5 @@ body, .site-header, .article-main, .site-footer { background: var(--paper); colo
 @media (prefers-reduced-motion: reduce) {
   #anflug:target .poster-line { animation: none; background: rgba(187,53,47,.06); }
 }
+
+.newsletter-demo { font-size: 14px !important; color: var(--deep) !important; opacity: .8; margin: 4px 0 10px !important; }
