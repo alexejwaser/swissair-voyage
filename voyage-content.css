@@ -152,3 +152,4 @@ body, .site-header, .article-main, .site-footer { background: var(--paper); colo
 .article-cover.window-cover img { width: min(100%, 460px); height: auto; aspect-ratio: 3 / 4; object-fit: cover; object-position: center; border-radius: 42% / 32%; border: clamp(8px, 1.2vw, 14px) solid var(--paper-light); box-shadow: 0 0 0 1px var(--line); background: #8fb8d6; }
 .article-cover.window-cover figcaption { justify-content: center; }
 @media (max-width: 700px) { .article-cover.window-cover img { width: min(100%, 340px); height: auto; } }
+.direct-line .direct-note { color: var(--muted); font-size: 12px; opacity: .8; }
