@@ -16,21 +16,10 @@ Texte stammen wörtlich aus `Texte/Copydeck_Lissabon.md` (Kapitel 1 und 2), ohne
 
 ## Funnel einer Folge
 
-Plakat A2 quer («Schau aus dem Fenster. Nicht aus der Wäsche.», QR-Code) → Instagram-Karussell (Schlusszitat) → Artikel «Lissabon, von oben.» → Crew-Artikel, Newsletter, #meinFensterplatz, leiser Direktflug-Hinweis.
+Plakat im Querformat («Hinter welchem Fenster nimmst du Platz?», QR-Code) → Instagram-Karussell → Artikel «Lissabon, von oben.» → Crew-Artikel, Newsletter, #meinFensterplatz, leiser Direktflug-Hinweis.
 
-## Ziel des Plakat-QR-Codes
+## Online
 
-`stories/lissabon-von-oben.html#anflug`
+https://alexejwaser.github.io/swissair-voyage/ (GitHub Pages)
 
-Der Abschnitt «Der Anflug» hat die ID `anflug`. Dort steht der Satz, der die Pointe des Plakat-Slogans auflöst: «Kurz vor der Landung fliegst du so tief über Lissabon, dass du die Wäsche auf den Balkonen zählen kannst.» Er ist hervorgehoben mit dem Label «Die Wäsche vom Plakat» und blinkt beim Ankommen über den Anker kurz auf. Für die Zählung kann ein Parameter davor stehen, z. B. `…/lissabon-von-oben.html?utm_source=plakat#anflug`.
-
-Das Plakat (Querformat A2, drei Fenster: New York, Lissabon, Alpen) nennt den Artikel nur in einer kleinen Zeile beim QR-Code: «Diesmal: Lissabon, von oben.» Das frühere Hochformat-Plakat mit dem Zitat ist verworfen.
-
-QR-Code und Plakat-Link funktionieren erst, wenn der Prototyp gehostet ist. Eine lokale Datei (`file://`) kann ein Handy nicht öffnen.
-
-## Dateien
-
-- CSS: `styles.css` → `editorial-refresh.css` → `minimal-update.css` → `layout-finish.css` → `voyage-content.css` (neu, zuletzt geladen: Papierfarbe, Tannengrün statt roter Kacheln, Plakat-Satz, Was nervt, Faktenbox, Artikelende).
-- `script.js`: Menü und Newsletter-Demo (sendet nichts, zeigt nur einen Bestätigungstext).
-- `assets/*-fenster.png`: verkleinerte Kopien der Fensterplatz-Illustrationen aus `Assets/05_Bilder` (Quelle in der Abgabe deklarieren).
-- `_archiv/`: Bilder des entfernten A350-Artikels (Flugzeug und Kabinen). Nicht mehr verlinkt, nur aufbewahrt.
+Der QR-Code auf dem Plakat führt auf `stories/lissabon-von-oben.html?utm_source=plakat#anflug`. Der Parameter `utm_source=plakat` zeigt in einer Statistik, wie viele Besuche über das Plakat kommen.
