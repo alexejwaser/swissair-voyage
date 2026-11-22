@@ -1,0 +1,115 @@
+/* VOYAGE V5 – Finaler Feinschliff, Stand 21.11.2026
+   Klares Raster, einheitliches Rot und gleich hohe Airline-Motive. */
+:root {
+  --voyage-red: #ba3330;
+  --voyage-gold: #e9c79c;
+  --voyage-cream: #faf8f2;
+}
+/* Drei gleichwertige Dummy-Kacheln: rot bleibt rot. */
+.cards-grid > .story-card,
+.cards-grid > .story-card:nth-child(2),
+.cards-grid > .story-card:nth-child(3) {
+  background: var(--voyage-red) !important;
+}
+.cards-grid > .story-card .story-meta { color: #f8ded7; }
+.story-preview .story-bottom b { color: white; }
+/* Die Titelgeschichte bleibt im selben Rot wie die drei Dummys. */
+.hero-feature-link .hero-text { background: var(--voyage-red) !important; }
+/* Airline: gleich hohe Bild-/Textflächen durch eine gemeinsame Grid-Zeile,
+   statt bisheriger align-items:start-Regel mit separaten Höhen. */
+.behind-grid {
+  display: grid !important;
+  align-items: stretch !important;
+  grid-template-columns: 56% 44% !important;
+  grid-auto-rows: minmax(0,auto);
+  min-height: 435px !important;
+}
+.behind-grid > .behind-visual.a350-feature,
+.behind-grid > .behind-content {
+  align-self: stretch !important;
+  height: 100% !important;
+  min-height: 435px !important;
+  margin:0 !important;
+}
+.behind-grid > .behind-visual.a350-feature { position:relative !important; aspect-ratio:auto !important; }
+.behind-grid > .behind-visual.a350-feature img { height:100% !important; width:100% !important; position:absolute !important; inset:0 !important; object-fit:cover; object-position:center center; }
+.behind-grid > .behind-content {
+  background:var(--voyage-red) !important;
+  color:var(--voyage-cream) !important;
+  padding:clamp(28px,3.7vw,51px) !important;
+  display:flex !important;
+  flex-direction:column;
+  align-items:flex-start;
+  justify-content:center;
+}
+.behind-content > .micro { color:var(--voyage-gold) !important; }
+.behind-content h3 { max-width:550px; font-size:clamp(46px,4.3vw,62px) !important; line-height:.99 !important; color:var(--voyage-cream) !important; margin:19px 0 18px !important; }
+.behind-content h3 em { color:var(--voyage-gold) !important; }
+.behind-content > p { color:#fff3ed !important; font-size:14px !important; line-height:1.74 !important; margin-bottom:16px !important; }
+.behind-content .behind-main-link {
+  border-bottom-color:rgba(255,248,236,.65) !important;
+  color:#fff8f2 !important;
+  width:min(100%,278px);
+  margin-top:17px !important;
+}
+.behind-content .behind-main-link span { color:var(--voyage-cream) !important; }
+.behind-content .behind-main-link b { color:var(--voyage-gold); }
+/* Die bereits gut lesbare rechte Artikelbox erhält das einheitliche Rot. */
+.article-lisboa .aside-panel {
+  background:var(--voyage-red) !important;
+  color:#fffaf5 !important;
+}
+.article-lisboa .aside-panel .micro,
+.article-lisboa .aside-panel .aside-foot { color:var(--voyage-gold) !important; }
+.article-lisboa .aside-panel h2 { color:#fff8f2 !important; }
+.article-lisboa .aside-panel ul { border-top-color:rgba(255,255,255,.32) !important; color:#fff2ed !important; }
+.article-lisboa .aside-panel li { border-bottom-color:rgba(255,255,255,.28) !important; }
+.article-lisboa .aside-panel li strong { color:white !important; }
+/* Eindeutige direkte Weiterführung: eigener, klickbarer Buchungsaufruf. */
+.article-lisboa .booking-card {
+  grid-column: 1 / -1;
+  background:var(--voyage-red);
+  color:#fffaf5;
+  display:grid;
+  grid-template-columns: minmax(0,1.35fr) minmax(225px,.65fr);
+  align-items:end;
+  gap:24px 48px;
+  margin-top:26px;
+  padding:clamp(32px,4.9vw,64px);
+}
+.booking-card .micro { color:var(--voyage-gold) !important; letter-spacing:.14em; }
+.booking-card h2 {
+  color:#fffaf5;
+  font:500 clamp(43px,5.3vw,74px)/.96 var(--serif);
+  letter-spacing:-.035em;
+  max-width:620px;
+  margin:20px 0 18px;
+}
+.booking-card h2 em { color:var(--voyage-gold); font-weight:400; }
+.booking-card p { font-size:15px; line-height:1.78; color:#fff2ec; max-width:600px; margin:0; }
+.booking-card-link {
+  display:flex; align-items:center; justify-content:space-between;
+  gap:14px; border-bottom:1px solid rgba(255,248,240,.75);
+  color:#fffaf5; padding:14px 0 15px; font-weight:700;
+  font-size:11px; letter-spacing:.085em;
+  transition:border-color .2s ease,color .2s ease;
+}
+.booking-card-link span:last-child { font-size:27px; color:var(--voyage-gold); line-height:1; }
+.booking-card-link:hover { color:var(--voyage-gold); border-bottom-color:var(--voyage-gold); }
+.booking-card-link:focus-visible { outline:3px solid white; outline-offset:4px; }
+/* Switzer für Navigation und UI bleibt erhalten. */
+@media(max-width:900px) {
+ .behind-grid { grid-template-columns:1fr !important; min-height:0 !important; }
+ .behind-grid > .behind-visual.a350-feature { height:auto !important; aspect-ratio:3 / 2 !important; min-height:0 !important; }
+ .behind-grid > .behind-content { height:auto !important; min-height:0 !important; padding:clamp(30px,5vw,48px) !important; }
+ .article-lisboa .booking-card { grid-template-columns:1fr; }
+ .booking-card-link { max-width:420px; }
+}
+@media(max-width:580px) {
+ .behind-grid > .behind-visual.a350-feature { aspect-ratio:3 / 2 !important; min-height:0 !important; }
+ .behind-grid > .behind-content { padding:32px 28px !important; }
+ .behind-content h3 { font-size:clamp(48px,11.5vw,61px) !important; }
+ .article-lisboa .booking-card { margin-top:10px; padding:29px 27px 35px; }
+ .booking-card h2 { font-size:clamp(46px,10.5vw,59px); }
+ .booking-card-link { font-size:10px; }
+}

@@ -1,0 +1,39 @@
+/* VOYAGE V6 – final editorial adjustments, November 2026.
+   Uses existing grid, typography and palettes. */
+:root { --voyage-red:#ba3330; --voyage-cream:#faf8f2; --voyage-green:#233931; }
+/* No decorative headings, tags or pictograms in the title story. */
+.hero-section .hero-grid { margin-top: 8px; }
+.hero-section .hero-text { display:flex;flex-direction:column;justify-content:center; }
+.hero-section .hero-text h1 { margin-top:0 !important; }
+.hero-section .hero-visual img { object-position:center center; }
+/* All teaser blocks precisely one brand red; the country labels remain. */
+.cards-grid > .story-card, .cards-grid > .story-card:nth-child(2), .cards-grid > .story-card:nth-child(3) { background:var(--voyage-red) !important; }
+.story-preview .story-meta { letter-spacing:.10em; }
+.cards-section .section-heading { margin-bottom:30px; }
+.cards-section .section-heading h2 { margin-top:0 !important; }
+.cards-grid .story-card:nth-child(2) .story-visual img { object-position:center 52%; }
+/* A little extra warmth and vibrancy in real photographs only, no image compositing. */
+.hero-feature-link .hero-visual img, .article-lisboa .lisboa-cover img, .article-lisboa .article-inset img, .story-visual img { filter:saturate(1.10) contrast(1.035); }
+.article-lisboa .lisboa-cover img { object-position: 50% 50%; }
+.article-lisboa .lisboa-tram-feature { margin:36px 0 39px; }
+.article-lisboa .lisboa-tram-feature img { width:100%; height:auto; aspect-ratio:16 / 9; display:block; object-fit:cover; object-position:center 56%; }
+.article-lisboa .tram-text { font-size:16px;line-height:1.82; }
+.article-lisboa .article-body .article-inset img { object-position:center center; }
+.article-lisboa .article-section .article-inset { margin-top:29px; }
+/* Unified full-width journey conclusion and booking call. */
+.article-lisboa .booking-card { margin-top: 42px; padding:clamp(40px,5.1vw,72px); align-items:center; }
+.article-lisboa .booking-card h2 { max-width:690px; line-height:1; }
+.article-lisboa .booking-card p { max-width:690px; font-size:16px;line-height:1.72; }
+.article-lisboa .booking-card .booking-second { margin-top:17px; color:#fffaf1; }
+.article-lisboa .booking-card .booking-card-link { align-self:end; }
+.article-lisboa .article-cta { margin-bottom:0; }
+@media(max-width:900px) {
+  .article-lisboa .booking-card { grid-template-columns:1fr !important; }
+  .article-lisboa .booking-card .booking-card-link { align-self:start; }
+}
+@media(max-width:620px) {
+  .hero-section .hero-text h1 { margin-top:0 !important; }
+  .article-lisboa .lisboa-tram-feature img { aspect-ratio:4 / 3; }
+  .article-lisboa .booking-card { padding:33px 27px 38px; }
+  .article-lisboa .booking-card p { font-size:15px; }
+}

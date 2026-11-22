@@ -1,0 +1,57 @@
+/* Voyage V4 · präzise Ergänzungen zur bestehenden Gestaltung. */
+:root { --voyage-green: #233931; --voyage-gold: #e9c79c; --voyage-red:#ba3330; }
+/* Die Titelgeschichte trägt das Rot der Konzeptarbeit. */
+.hero-feature-link .hero-text { background: var(--voyage-red) !important; color: #fffaf1 !important; }
+.hero-feature-link .hero-text .micro { color: #f0d7c4 !important; }
+.hero-feature-link .hero-text h1, .hero-feature-link .hero-text h1 span { color: #fffaf1 !important; }
+.hero-feature-link .hero-text h1 em { color: var(--voyage-gold) !important; }
+.hero-feature-link .hero-text > p { color: #fff3eb !important; }
+.hero-feature-link .hero-text .text-action { color: #fff !important; border-color: rgba(255,255,255,.65) !important; }
+.hero-feature-link .hero-text .hero-caption { color: #f1dbd0 !important; }
+.hero-feature-link .hero-text .caption-rule { background-color: rgba(255,255,255,.55) !important; }
+.hero-feature-link:focus-visible { outline: 3px solid var(--voyage-red); outline-offset: 5px; }
+/* Die nummerierten Bildplaketten werden Kontinente. */
+.story-visual .continent-label { letter-spacing: .14em; font-size: 10px; padding: 7px 12px; }
+/* Echtes literarisches Zitat statt eigener Werbespruch. */
+.interlude-inner .voyage-proust-quote { font-size: clamp(36px,4.65vw,62px); max-width: 920px; line-height: 1.15; margin: 18px auto 18px; }
+.interlude-inner .voyage-proust-quote em { color: var(--voyage-red); }
+.interlude-inner .interlude-source { display:block; font: 650 10px/1.8 var(--sans); letter-spacing: .15em; color: var(--voyage-green); }
+.interlude-inner .quote-note { font-weight: 450; color:#75766f; letter-spacing:.08em; }
+/* Dunkelgrüne A350-Kachel wie die grünen Prototypseiten im Dossier. */
+.behind-section { background: #f8f6f0 !important; color: var(--voyage-green) !important; border-top: 1px solid #d7d8d3; }
+.behind-head .micro { color: var(--voyage-red) !important; }
+.behind-head h2 { font-size: clamp(40px,4.45vw,67px) !important; line-height: 1.03 !important; max-width: 1000px; color: var(--voyage-green) !important; }
+.behind-head h2 em { color: var(--voyage-red) !important; }
+.behind-grid { border: 0 !important; }
+.behind-content { background: var(--voyage-green) !important; color: #f8f3e9 !important; padding: clamp(32px,4vw,56px) !important; }
+.behind-content .micro { color: var(--voyage-gold) !important; }
+.behind-content h3 { color: var(--voyage-gold) !important; font-size: clamp(45px,4.5vw,65px) !important; }
+.behind-content h3 em { color: #fffdf5 !important; }
+.behind-content > p { color: #eee5d8 !important; }
+.behind-content .behind-main-link { display:flex; align-items:center; justify-content:space-between; color: var(--voyage-gold) !important; border-bottom: 1px solid rgba(233,199,156,.72) !important; cursor: default; text-decoration:none; min-width: min(100%,250px); letter-spacing:.08em; }
+.behind-content .behind-main-link span { font: 700 11px/1.2 var(--sans); color:var(--voyage-gold) !important; }
+.behind-content .behind-main-link b { font: normal 23px/1 var(--sans); }
+.behind-visual.a350-feature:hover img { transform:none !important; }
+/* Artikel-Seitenleiste als ruhige, grosszügige Voyage-Karte. */
+.article-lisboa .article-aside { min-width:0; }
+.article-lisboa .aside-panel { box-sizing:border-box; background:var(--voyage-green) !important; border:none !important; border-radius: 0; padding: clamp(29px,3.4vw,45px) clamp(23px,3vw,38px) clamp(26px,3.2vw,43px) !important; color:#fffaf0 !important; top:28px; }
+.article-lisboa .aside-panel .micro { color: var(--voyage-gold) !important; letter-spacing:.12em; line-height:1.5; }
+.article-lisboa .aside-panel h2 { color:var(--voyage-gold) !important; font: 500 clamp(30px,3vw,39px)/1.08 var(--serif); margin: 21px 0 28px !important; }
+.article-lisboa .aside-panel ul { list-style:none; margin:0; padding:0 !important; border-top:1px solid rgba(255,255,255,.23) !important; color:#efece6 !important; font-size: 13px !important; line-height:1.65 !important; }
+.article-lisboa .aside-panel li { padding:18px 0 17px !important; margin:0 !important; border-bottom:1px solid rgba(255,255,255,.21); overflow-wrap:anywhere; }
+.article-lisboa .aside-panel li strong { font-weight:650; color:#fffdf8; display:inline-block; margin-bottom:4px; }
+.article-lisboa .aside-panel .aside-foot { display:block; margin-top:30px; padding-top:0; color:var(--voyage-gold) !important; letter-spacing:.12em; font: 700 10px/1.7 var(--sans); }
+/* Keine Quellenbox auf der Website – Quellen im separaten Dossier. */
+.article-lisboa .article-sources { display:none !important; }
+@media (max-width:850px) {
+ .article-lisboa .aside-panel { position:static; padding:30px 30px 34px !important; }
+ .behind-content { min-height:0 !important; }
+}
+@media(max-width:620px) {
+ .hero-feature-link .hero-text { padding:30px 26px !important; }
+ .hero-feature-link .hero-text h1 { font-size:clamp(55px,13vw,76px) !important; }
+ .interlude-inner .voyage-proust-quote { font-size:clamp(33px,8.5vw,48px); }
+ .interlude-inner .interlude-source { font-size:9px; }
+ .behind-head h2 { font-size:clamp(39px,9vw,55px) !important; }
+ .behind-content { padding:34px 28px !important; }
+}

@@ -1,0 +1,56 @@
+
+/* Voyage 2026 · finale Korrekturen – Originalkacheln und Editorial-Raster bleiben. */
+:root { --sans: 'Switzer', 'Helvetica Neue', Arial, sans-serif; }
+body, button, input, textarea, select { font-family: var(--sans); }
+.story-body, .hero-text > p, .article-body, .article-aside, .main-nav, .story-meta, .micro { font-family: var(--sans); }
+/* Switzer setzt die ruhige Typografie des Konzeptdokuments fort. Serif-Headlines bleiben bestehen. */
+.site-header .brand-mark { display:block; width:clamp(215px,28vw,320px); }
+.cards-section .section-heading > p { max-width:300px; }
+.story-preview, .story-preview * { cursor:default; }
+.story-preview:hover { transform:none!important; box-shadow:none!important; }
+.story-preview:hover img { transform:none!important; }
+.story-preview .story-bottom { cursor: default; }
+.story-preview .story-bottom b { font-size:21px; line-height:1; color:#fff; }
+.story-card .story-body { min-height: 300px; }
+.story-body h3 { font-size: clamp(42px,3.75vw,56px); }
+.story-visual { position:relative; background:linear-gradient(140deg,#3b6262,#6f8e96); }
+.story-visual::before { content:''; position:absolute; inset:0; background:linear-gradient(125deg,#2d5158,#7b8582); opacity:0; transition:opacity .2s; }
+.story-visual.is-fallback::before { opacity:1; }
+.story-visual .image-placeholder { display:none; position:absolute; inset:0; align-items:center; justify-content:center; text-align:center; font: 500 clamp(30px,4vw,44px)/1.1 var(--serif); color:#fff; }
+.story-visual.is-fallback .image-placeholder { display:flex; }
+.story-visual.is-fallback img { display:none; }
+.hero-visual > img, .story-visual > img, .article-inset > img { background:#e0e5e0; }
+/* Der A350 bleibt als einzige grosse Airline-Kachel stehen. */
+.behind-subnav { display:none!important; }
+.behind-content { justify-content:center; }
+.behind-content .dummy-label { margin-top:16px; }
+/* Content statt Bildwüste: magazintypischer Satz und klar gesetzte Tipps. */
+.article-lisboa .article-body > p:not(.drop-intro), .article-lisboa .article-section p { font-size:16px; line-height:1.82; }
+.article-lisboa .article-section { margin-bottom:62px; }
+.article-lisboa .article-section h2 { margin-bottom:17px; }
+.article-lisboa .article-section strong { font-weight:650; }
+.article-lisboa .article-section .article-tip { margin:24px 0 28px; padding:16px 20px; border-left:2px solid var(--red); background:#f6f5f0; font-size:15px; }
+.article-pullfact { border-top:2px solid var(--red); border-bottom:1px solid var(--line); margin:52px 0 60px; padding:22px 0; }
+.article-pullfact > span { display:block; color:var(--red); letter-spacing:.13em; font-size:10px; font-weight:700; margin-bottom:12px; }
+.article-pullfact > strong { font:500 clamp(29px,3vw,40px)/1.08 var(--serif); }
+.article-pullfact > p { color:#65736a; font-size:14px; line-height:1.7; margin:10px 0 0; }
+.article-checkgrid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:0 30px; margin:28px 0 32px; }
+.article-checkgrid > div { border-top:1px solid #d7ddd8; padding:19px 0 17px; }
+.article-checkgrid span { display:block; font-size:10px; font-weight:700; letter-spacing:.12em; color:var(--red); margin-bottom:8px; }
+.article-checkgrid strong { display:block; font-size:18px; line-height:1.25; margin-bottom:7px; }
+.article-lisboa .article-checkgrid p { font-size:13px; line-height:1.68; margin:0; }
+.article-lisboa .article-inset img { aspect-ratio:16 / 10; max-height:455px; width:100%; object-fit:cover; }
+.article-lisboa .article-inset figcaption { line-height:1.55; }
+.article-lisboa .article-sources { background:#f7f7f2; border-left:0; border-top:1px solid #d1d9d2; padding:24px; }
+.article-lisboa .article-sources p { line-height:1.75; font-size:11px; }
+.article-lisboa .article-sources a { text-decoration:underline; }
+@media(max-width:850px) {
+ .article-checkgrid { grid-template-columns:1fr; }
+ .story-body h3 { font-size:clamp(39px,6vw,55px); }
+}
+@media(max-width:620px) {
+ .cards-grid { grid-template-columns:1fr; }
+ .article-lisboa .article-body > p:not(.drop-intro), .article-lisboa .article-section p { font-size:15px; }
+ .article-lisboa .article-section h2 { font-size:clamp(38px,8.5vw,50px); }
+ .behind-content { padding-bottom:38px; }
+}

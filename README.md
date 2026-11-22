@@ -1,25 +1,37 @@
-# Voyage by swissair · Web-Prototyp
+VOYAGE BY SWISSAIR · V5 · Website zum M280-Dossier
+===================================================
 
-Öffne `index.html` per Doppelklick im Browser. Kein Server, kein Build nötig.
-Fiktives, unabhängiges Schulkonzept (M280 LB2), nicht mit der historischen Swissair oder SWISS verbunden.
-Alle Seiten tragen `<meta name="robots" content="noindex, nofollow">`, damit der Prototyp nach dem Hosten nicht in Suchmaschinen auftaucht.
+Start: index.html im Ordner Voyage-Swissair lokal im Browser öffnen.
 
-## Seiten
+Änderungen gegenüber V4:
+- Gleiches Voyage-Rot für die Titelgeschichte und alle drei Destinationen-Kacheln.
+- Airline-Kachel im selben Rot; Bild und Kachel auf Desktop in einer gleich hohen Rasterzeile.
+- Aktualisierter Airbus-A350-900-Teaser «Ein neues Flaggschiff für Swissair» bleibt bewusst ein Dummy.
+- Keine Abschnittsnummern auf der Startseite und keine Zusatzkennzeichnung beim Proust-Zitat.
+- Rote Infobox im Lissabon-Artikel mit den bisherigen grosszügigen Innenabständen.
+- Neue prominent rote Abschlusskachel im Artikel mit externem Link zur offiziellen
+  SWISS-Streckenseite Zürich–Lissabon: https://www.swiss.com/lhg/ch/de/o-d/cy-cy/zuerich-lissabon
+- Footertext: Modul M280.
 
-| Datei | Inhalt |
-|---|---|
-| `index.html` | Startseite: Titelgeschichte «Lissabon, von oben.», Nächste Folgen (Kopenhagen, Island, leicht reisen, alle «erscheint bald»), #meinFensterplatz mit Beispielbildern, Mit der Crew |
-| `stories/lissabon-von-oben.html` | Rubrik Fensterplatz, Text Fabio Alverde. Anflug, Weg in die Stadt, erster Abend, Tipp für Erstreisende, **Was nervt**, Box «Fensterplatz-Fakten». Am Ende: #meinFensterplatz, Weiterlesen, Newsletter (Demo), ein Satz zum Direktflug, Quellen |
-| `stories/22-stunden-lissabon.html` | Mit der Crew. Geschichte der Flugbegleiterin Nora (fiktive Figur, gekennzeichnet), verlinkt zurück auf den Lissabon-Artikel |
+Funktionsumfang: Die Lissabon-Titelgeschichte führt zum Artikel. Die drei anderen
+Reiseziele und die Airline-Kachel sind reine Vorschauen ohne Funktion. Die
+Buchungskachel führt auf die offizielle SWISS-Website; die Buchung selbst
+findet dort statt. Die internen Rück- und Navigationslinks bleiben erhalten.
 
-Texte stammen wörtlich aus `Texte/Copydeck_Lissabon.md` (Kapitel 1 und 2), ohne Klammer-Notizen und [prüfen]-Marker.
+Externe Bilder und Webfonts benötigen eine Internetverbindung.
+Foto-, Text- und Quellenangaben für die Projektdokumentation siehe
+QUELLEN_FUER_DOKUMENT.md (nicht als sichtbare Website-Komponente).
 
-## Funnel einer Folge
+Schulprojekt / Konzeptwebsite – die Website ist kein offizielles Angebot
+von SWISS bzw. der historischen Swissair.
 
-Plakat im Querformat («Hinter welchem Fenster nimmst du Platz?», QR-Code) → Instagram-Karussell → Artikel «Lissabon, von oben.» → Crew-Artikel, Newsletter, #meinFensterplatz, leiser Direktflug-Hinweis.
 
-## Online
+### Version 6 – Abschlussfeinschliff
+- Titelstory: reduzierte Header und Etiketten, neue grossformatige reale Lisbon-Fotografie.
+- Reiseziel-Kacheln: kein Vorschaustempel, Titel und Buttons ohne Link; Island mit neuer Nordlichtaufnahme.
+- Lissabon-Reiseartikel: weitere lebendige Originalfotografien, Strassenbahn-Szene und vier Orte aus der Social-Media-Reihe.
+- Der separate Schlussabschnitt ist mit der roten Buchungskachel zusammengeführt; die Buchungskachel führt zur externen Flugseite.
+- Airline-Kachel: redaktioneller Teaser ohne Konzept-/Fiktiv-Formulierungen; weiterhin nicht anklickbar.
+- Quellen: `QUELLEN_FUER_DOKUMENT.md` (separat für die Abgabe). Die Webseite selbst enthält kein Quellenverzeichnis.
 
-https://alexejwaser.github.io/swissair-voyage/ (GitHub Pages)
-
-Der QR-Code auf dem Plakat führt auf `stories/lissabon-von-oben.html?utm_source=plakat#anflug`. Der Parameter `utm_source=plakat` zeigt in einer Statistik, wie viele Besuche über das Plakat kommen.
+**Bildhinweis:** Die hochaufgelösten Fotografien liegen bei Wikimedia Commons und benötigen eine Internetverbindung. Lokal mitgelieferte Fotos dienen als Rückfalllösung. Bei einer öffentlichen Veröffentlichung müssen alle Lizenzbedingungen eingehalten werden; diese Website ist ein Schulprojekt.
